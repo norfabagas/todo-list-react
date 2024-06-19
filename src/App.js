@@ -13,6 +13,7 @@ class App extends React.Component {
 
   handleInput = e => {
     e.preventDefault();
+    // eslint-disable-next-line
     const tasks = [...this.state.tasks];
     this.setState({ input: e.target.value })
   }
