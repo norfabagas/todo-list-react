@@ -11,6 +11,7 @@ class AddTask extends Component {
                     className="form-control col-md-10"
                     onChange={this.props.onInput}
                     value={this.props.inputValue}
+                    placeholder="Input task here..."
                 />
                 <button
                     className="btn btn-md btn-primary col-md-2"

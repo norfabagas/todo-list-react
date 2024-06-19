@@ -55,24 +55,28 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="col-md-6 offset-3 mt-4">
-        <AddTask 
-          onInput={this.handleInput}
-          onSubmitTask={this.handleSubmitTask}
-          inputValue={this.state.input}
-        />
-        <div className="card">
-          <Header 
-            taskCounter={this.state.tasks.filter(c => !c.done).length}
-          />
-          <div
-            className="card-body"
-          >
-            <Tasks 
-              tasks={this.state.tasks}
-              onSwitchStatus={this.handleSwitchStatus}
-              onDeleteTask={this.handleDeleteTask}
+      <div className="container">
+        <div className="row">
+          <div className="col-12 mt-4">
+            <AddTask 
+              onInput={this.handleInput}
+              onSubmitTask={this.handleSubmitTask}
+              inputValue={this.state.input}
             />
+            <div className="card">
+              <Header 
+                taskCounter={this.state.tasks.filter(c => !c.done).length}
+              />
+              <div
+                className="card-body"
+              >
+                <Tasks 
+                  tasks={this.state.tasks}
+                  onSwitchStatus={this.handleSwitchStatus}
+                  onDeleteTask={this.handleDeleteTask}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
